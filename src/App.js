@@ -1,41 +1,51 @@
-// import React, { useState, useEffect } from 'react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import User from './User';
+// import React from 'react';
 import './App.css'
 
 console.clear();
 
 
 
-// export default function App() {
-//     const [userIsLoggedIn, setIsUserLoggedIn] = useState(false);
-//     const [users, setUsers] = useState([])
-//
-//     // ComponentDidMount
-//     useEffect(() => {
-//         console.log("Mounted");
-//         fetch("https://randomuser.me/api?results=25")
-//         .then((response) => response.json())
-//         .then((data) => {
-//             setUsers(data.results);
-//         });
-//     }, []);
-//
-//     useEffect(() => {
-//         console.log("UPDATED", users)
-//     }, [users])
-//
-//     const handleClick = () => {
-//         setIsUserLoggedIn(!userIsLoggedIn);
-//     };
-//
-//     return (
-//       <div className="App">
-//         <h1> Hello CodeSandbox</h1>
-//         <h2> Start editing to see some magic happen!</h2>
-//         <button onClick={handleClick}> Click me </button>
-//       </div>
-//     );
-//   }
+
+
+export default function App() {
+    // const [userIsLoggedIn, setIsUserLoggedIn] = useState(false);
+    const [users, setUsers] = useState([])
+
+    // ComponentDidMount
+    useEffect(() => {
+        console.log("Mounted");
+        fetch("https://randomuser.me/api?results=25")
+        .then((response) => response.json())
+        .then((data) => {
+            setUsers(data.results);
+        });
+    }, []);
+
+    useEffect(() => {
+
+    }, [users])
+
+    // const handleClick = () => {
+    //     setIsUserLoggedIn(!userIsLoggedIn);
+    //
+    //
+    //
+    //     // console.log(setIsUserLoggedIn(!userIsLoggedIn))
+    // };
+
+    return (
+      <div className="App">
+        <ul>
+            {users.map((user) => {
+                //eslint-disable-next-line
+                return <User data = {user}/>
+            })}
+        </ul>
+      </div>
+    );
+  }
 
 
 
