@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import User from './User';
 // import React from 'react';
-import './App.css'
+import './App.css';
 
 console.clear();
 
@@ -37,7 +37,10 @@ export default function App() {
 
     return (
       <div className="App">
-        <ul>
+        <ul style={{
+            // backgroundColor: 'red'
+        }} className="pictures">
+
             {users.map((user) => {
                 //eslint-disable-next-line
                 return <User data = {user}/>

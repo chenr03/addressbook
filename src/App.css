@@ -1,4 +1,9 @@
 .App {
+
+  background-color: lightskyblue;
+}
+
+.App {
   text-align: center;
 }
 
@@ -35,4 +40,39 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+ul{
+  list-style: none;
+  background-color: red;
+}
+
+img.randomUser {
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+  border: 5px solid black;
+}
+
+.App-button {
+  color: white;
+}
+
+.useEffect {
+  margin: 50px;
+}
+
+h1 {
+  color: red;
+}
+
+.Pictures {
+  border: 5px solid black;
+  background-color: red;
+}
+
+button {
+  background-color: green;
+  color: white;
+  text-align: center;
 }
